@@ -1,1 +1,4 @@
 # gulp
+
+Command:
+npm i
