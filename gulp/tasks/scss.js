@@ -48,8 +48,8 @@ export const scss = () => {
                 })
             )
         )
-        // .css without cleanCss
-        .pipe(app.gulp.dest(app.path.build.css))
+        // .css without cleanCss:
+        // .pipe(app.gulp.dest(app.path.build.css))
 
         .pipe(
             app.plugins.if(

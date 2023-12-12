@@ -1,7 +1,7 @@
-// import fileinclude from 'gulp-file-include';
+import fileinclude from 'gulp-file-include';
 import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
-import pug from 'gulp-pug';
+// import pug from 'gulp-pug';
 
 
 export const html = () => {
@@ -12,11 +12,11 @@ export const html = () => {
                 message: 'Error <%= error.message %>'
             })
         ))
-        // .pipe(fileinclude())
-        .pipe(pug({
-            pretty: true,
-            verbose: true,
-        }))
+        .pipe(fileinclude())
+        // .pipe(pug({
+        //     pretty: true,
+        //     verbose: true,
+        // }))
         .pipe(app.plugins.replace(/@img\//g, 'img/'))
         .pipe(
             app.plugins.if(
@@ -26,7 +26,7 @@ export const html = () => {
         )
         .pipe(
             app.plugins.if(
-                app.isBuild,
+                app.isDev,
                 versionNumber({
                     'value': '%DT%',
                     'append': {

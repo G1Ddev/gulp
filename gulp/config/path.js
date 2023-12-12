@@ -19,14 +19,14 @@ export const path = {
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,
         scss: `${srcFolder}/scss/style.scss`, // scss/sass
-        html: `${srcFolder}/*.pug`, // pug/html
+        html: `${srcFolder}/*.html`, // pug/html
         files: `${srcFolder}/files/**/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
     },
     watch: {
         js: `${srcFolder}/js/**/*.js`,
         scss: `${srcFolder}/scss/**/*.scss`, // scss/sass
-        html: `${srcFolder}/**/*.pug`, // pug/html
+        html: `${srcFolder}/**/*.html`, // pug/html
         images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
         files: `${srcFolder}/files/**/*.*`,
     },
